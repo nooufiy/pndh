@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ================== #
-# Pindah Server Fath
+# Pindah Server Shu
 # ================== #
 
 srv="$1"
