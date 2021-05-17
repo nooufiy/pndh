@@ -13,7 +13,7 @@ rsync -avzh --progress root@"$srv":/var/www/html/* /var/www/html
 chcon -R -t httpd_sys_rw_content_t /home
 chcon -R -t httpd_sys_rw_content_t /var/www/html
 
-rsync -avzh --progress root@"$srv":/root/.netlify /root
+rsync -avzh --progress root@"$srv":/root/.config/netlify /root/.config
 
 mv /etc/php.ini /etc/php.ini-bak
 rsync -avzh --progress root@"$srv":/etc/php.ini /etc
