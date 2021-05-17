@@ -21,8 +21,13 @@ rsync -avzh --progress root@"$srv":/etc/php.ini /etc
 mv /etc/httpd/conf/httpd.conf /etc/httpd/conf/httpd.conf-bak
 rsync -avzh --progress root@"$srv":/etc/httpd/conf/httpd.conf /etc/httpd/conf
 
-curl -sL https://rpm.nodesource.com/setup_10.x | sudo bash -
+curl -sL https://rpm.nodesource.com/setup_14.x | sudo bash -
 yum install -y nodejs
+sudo yum install -y gcc-c++ make
+
+curl -sL https://dl.yarnpkg.com/rpm/yarn.repo | sudo tee /etc/yum.repos.d/yarn.repo
+sudo yum install -y yarn
+
 #npm install netlify-cli -g
 npm install --unsafe-perm=true -g netlify-cli
 npm i -g vercel
