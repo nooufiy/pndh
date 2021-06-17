@@ -32,3 +32,4 @@ sudo yum install -y yarn
 npm install --unsafe-perm=true -g netlify-cli
 npm i -g vercel
 
+service httpd restart
